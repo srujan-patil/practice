@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srujan Panthula - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Header styles */
+        header {
+            background-color: #4e54c8;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        header .contact-info {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        header .contact-info p {
+            margin: 5px 0;
+        }
+        header .contact-info a {
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+        header .contact-info a:hover {
+            color: #ddd;
+        }
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 30px;
+        }
+        nav a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            color: #fff;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #667eea;
+        }
+        /* Main styles */
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #fff;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: slideIn 1s ease-in-out;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4e54c8;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* About section specific styles */
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .about-content {
+            max-width: 800px;
+            margin-top: 30px;
+        }
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+        /* Experience section styles */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+        .experience-item h3 {
+            font-size: 1.8em;
+            color: #4e54c8;
+            margin-bottom: 10px;
+        }
+        .experience-item h4 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .experience-item p {
+            line-height: 1.6;
+        }
+        /* Projects section styles */
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .project-item {
+            width: calc(50% - 20px);
+            background-color: #f1f3f6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+        .project-item h3 {
+            font-size: 1.5em;
+            color: #4e54c8;
+            margin-bottom: 10px;
+        }
+        .project-item p {
+            margin-bottom: 15px;
+        }
+        .project-item i {
+            margin-right: 10px;
+        }
+        /* Education section styles */
+        .education-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .education-item {
+            width: calc(50% - 20px);
+            background-color: #f1f3f6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
+        .education-item h3 {
+            font-size: 1.5em;
+            color: #4e54c8;
+            margin-bottom: 10px;
+        }
+        .education-item p {
+            margin-bottom: 15px;
+        }
+        /* Certificates section styles */
+        .certificates-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .certificates-list li {
+            margin-bottom: 10px;
+        }
+        /* Skills section styles */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .skills-item {
+            width: calc(33.33% - 20px);
+            background-color: #f1f3f6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .skills-item:hover {
+            transform: translateY(-5px);
+        }
+        .skills-item i {
+            font-size: 2em;
+            color: #4e54c8;
+            margin-bottom: 10px;
+        }
+        .skills-item h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .skills-item p {
+            margin-bottom: 0;
+        }
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        /* Media queries */
+        @media (max-width: 768px) {
+            .projects-list, .education-list, .skills-list {
+                flex-direction: column;
+            }
+            .project-item, .education-item, .skills-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Srujan Panthula</h1>
+        <div class="contact-info">
+            <p>+91 6281603690</p>
+            <p>Vellore, TN</p>
+            <p><a href="mailto:srujanpanthula90@gmail.com">srujanpanthula90@gmail.com</a></p>
+            <p><a href="https://linkedin.com/in/srujan-panthula-b8878016b" target="_blank">LinkedIn</a></p>
+            <p><a href="https://github.com/srujan-patil" target="_blank">GitHub</a></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>Seeking a dynamic role in software development where I can leverage my expertise in Python, AWS, and DevOps to contribute effectively to innovative projects, while continuing to learn and grow professionally. Demonstrated aptitude, strong interpersonal skills, resilience, innovative mindset, proficient problem-solving abilities, meticulous attention to detail, and openness to flexible hours further enhance my contributions.</p>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>E2E Networks: Cloud Platform Engineer</h3>
+                <h4>2 months</h4>
+                <p>During my two months of professional experience as a Cloud Platform Engineer, I actively honed my skills in troubleshooting, networking, and working with technologies such as Active Directory, VPN, IP addressing, proxy servers, DNS, firewalls, TCP, UDP, and Linux troubleshooting. I provided product support and gained valuable knowledge about Docker, Kubernetes, networking, and load balancing. Additionally, I have a solid foundation in computer networks, cloud computing, technical support, and help desk operations.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Bharath Cloud: Cloud Success Intern</h3>
+                <h4>3 months</h4>
+                <p>During my internship and subsequent 3 months of professional experience in the technical support field, I actively honed my skills in troubleshooting, networking, and utilizing technologies such as Active Directory, VPN, IP Addressing, Proxy, DNS, Firewall, and TCP. In addition to this, I have a solid foundation in computer networks, cloud computing, technical support, support help desk knowledge, and Power BI.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>Automated CI/CD Pipeline</h3>
+                    <p>Real-time CI/CD deliverable pipeline on Jenkins with GitHub integration.</p>
+                    <i class="fas fa-code fa-lg"></i>
+                </div>
+                <div class="project-item">
+                    <h3>Credit Card Fraud Detection using ML</h3>
+                    <p>Detecting frauds on credit card holders using machine learning algorithms such as random forest, decision tree, and x-boost.</p>
+                    <i class="fas fa-chart-line fa-lg"></i>
+                </div>
+                <div class="project-item">
+                    <h3>Smart Attendance Portal</h3>
+                    <p>Developed an innovative smart attendance portal for an academic project, automating attendance with biometric and RFID technology.</p>
+                    <i class="fas fa-user-check fa-lg"></i>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>Bachelor of Technology - Information Technology</h3>
+                    <p>Guru Ghasidas Central University, Bilaspur (2018-2023)</p>
+                    <p>CGPA: 7.54</p>
+                </div>
+                <div class="education-item">
+                    <h3>Intermediate - MPC</h3>
+                    <p>Delhi Public School, Bilaspur (2016-2018)</p>
+                    <p>Percentage: 82%</p>
+                </div>
+                <div class="education-item">
+                    <h3>Schooling</h3>
+                    <p>Victory High School, Chandur (2016)</p>
+                    <p>Percentage: 88%</p>
+                </div>
+            </div>
+        </section>
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <ul class="certificates-list">
+                <li>Industrial Program on Web Development - Raise Digital</li>
+                <li>SQL Basics - Hackerrank</li>
+                <li>Database Operations in MariaDB Using Python - Infosys</li>
+            </ul>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skills-item">
+                    <i class="fas fa-code fa-3x"></i>
+                    <h3>Programming Languages</h3>
+                    <p>Python, SQL, HTML, CSS</p>
+                </div>
+                <div class="skills-item">
+                    <i class="fas fa-tools fa-3x"></i>
+                    <h3>Technical Skills</h3>
+                    <p>Github, Linux, Bash Scripting, Jenkins, Tomcat, Docker, Kubernetes, Cloud, CI/CD, Power BI</p>
+                </div>
+                <div class="skills-item">
+                    <i class="fab fa-aws fa-3x"></i>
+                    <h3>AWS Services</h3>
+                    <p>EC2, S3, IAM, ELB, VPC and Knowledge of Windows operating system</p>
+                </div>
+                <div class="skills-item">
+                    <i class="fas fa-user-friends fa-3x"></i>
+                    <h3>Soft Skills</h3>
+                    <p>ITIL-4, Highly Adaptive, Hardworking, Good Communication, Troubleshooting skills</p>
+                </div>
+                <div class="skills-item">
+                    <i class="fas fa-language fa-3x"></i>
+                    <h3>Languages Known</h3>
+                    <p>English, Hindi, Telugu</p>
+                </div>
+                <div class="skills-item">
+                    <i class="fas fa-seedling fa-3x"></i>
+                    <h3>Interests</h3>
+                    <p>Gardening, Browsing Internet, Blogging</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetSection = document.querySelector(event.target.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
+
