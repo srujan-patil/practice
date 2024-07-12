@@ -1,0 +1,316 @@
+    1  ps -a
+    2  ps
+    3  free
+    4  top
+    5  ps -ef
+    6  df -Th
+    7  systemctl status ufw
+    8  # ufw allow 1167
+    9  # ufw allow 1167/tcp
+   10  # ufw status
+   11  sudo iptables -L
+   12  iptables-save > IPtablesbackup.txt
+   13  cat IPtablesbackup.txt 
+   14  sudo iptables -A INPUT -p tcp --dport 1167 -j ACCEPT
+   15  iptables -L
+   16  sudo iptables -A INPUT -p tcp --dport 10050 -j ACCEPT
+   17  iptables -L
+   18  ps -ef
+   19  top
+   20  free
+   21  ufw
+   22  ufw -- help
+   23  iptables -L
+   24  iptables -- help
+   25  iptables -h
+   26  iptables -h > iptablesall.txt
+   27  cat iptablesall.txt 
+   28  apt install git -y
+   29  git -v
+   30  git -- version
+   31  git --version
+   32  git init
+   33  git clone https://github.com/srujan-patil/one.git
+   34  ls
+   35  mv iptablesall.txt  one/
+   36  cd one
+   37  ll
+   38  cd one
+   39  ls
+   40  git add.
+   41  git add .
+   42  git push --all origin
+   43  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list > /dev/null
+   44  sudo apt-get update
+   45  sudo apt-get install jenkins
+   46  vim scrip.sh
+   47  chmod +x scrip.sh 
+   48  ./scrip.sh 
+   49  sudo apt-get install jenkins
+   50  systemctl status jenkins
+   51  systemctl status jenkins.service
+   52  vim scrip.sh
+   53  ./scrip.sh 
+   54  vim scrip.sh
+   55  vim scrip.sh 
+   56  ./scrip.sh 
+   57  sudo apt-mark showhold
+   58  sudo apt-mark unhold <package-name>
+   59  sudo apt-mark unhold jenkins
+   60  sudo apt-get install init-system-helpers
+   61  sudo apt-get install -f jenkins
+   62  wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+   63  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+   64  sudo apt-get update
+   65  sudo apt-get install jenkins
+   66  vim scrip.sh 
+   67  ./scrip.sh 
+   68  sudo apt-get clean
+   69  sudo apt-get autoremove
+   70  sudo apt-get install -f
+   71  sudo dpkg -i package-name.deb
+   72  sudo apt-get install -f
+   73  systemctl status jenkins
+   74  if config
+   75  ifconfig
+   76  sudo apt install docker.io -y
+   77  ifconfig
+   78  docker networks ls
+   79  docker network ls
+   80  docker run -itd --rm --name srujan nginx
+   81  docker run -itd --rm --name vasanth nginx
+   82  docker run -itd --rm --name vennela busybox
+   83  docker images ls
+   84  docker containers  ls
+   85  ifconfig
+   86  docker inspect bridge 
+   87  docker exec -it srujan sh
+   88  docker exec -it srujan bash
+   89  docker exec -it vennela sh
+   90  docker run -itd --rm -p 80:80  --name box1 nginx
+   91  docker container
+   92  docker container ls
+   93  ssh root@216.48.191.54
+   94  ping 216.48.191.54
+   95  docker build -itd --name secound -p 9000:80 apache
+   96  docker build --help
+   97  docker run -itd --name secound -p 9000:80 apache
+   98  docker run -itd --name secound -p 9000:80 nginx
+   99  docker exec secound /bash/
+  100  docker exec secound bash
+  101  docker network ls
+  102  docker network create srujan
+  103  docker network ls
+  104  sudo apt-get update
+  105  sudo apt-get install nfs-common
+  106  sudo mkdir /mnt/nfs_share
+  107  df -Th
+  108  lsblk
+  109  cd /mnt/
+  110  ls
+  111  cd nfs_share/
+  112  ls
+  113  cd
+  114  sudo mount 216.48.179.60:/shared_directory /mnt/nfs_share
+  115  cd /mnt/
+  116  cd nfs_share/
+  117  ll
+  118  ls
+  119  cd
+  120  sudo apt update
+  121  sudo apt install nfs-kernel-server
+  122  sudo mkdir -p /srv/nfs_share
+  123  sudo chown nobody:nogroup /srv/nfs_share
+  124  sudo chmod 755 /srv/nfs_share
+  125  sudo nano /etc/exports
+  126  cat /etc/exports
+  127  sudo exportfs -a
+  128  sudo systemctl restart nfs-kernel-server
+  129  sudo systemctl enable nfs-kernel-server
+  130  sudo ufw allow from any to any port nfs
+  131  cd/srv/nfs_share
+  132  cd /srv/nfs_share
+  133  ls
+  134  mkdir santosh.txt
+  135  clear
+  136  docker ps
+  137  docker exec b816b67a7427 -itd sh
+  138  docker exec --name b816b67a7427 -itd sh
+  139  docker exec --name secound -itd sh
+  140  sudo docker exec --name secound -itd sh
+  141  docker exec -it secound  /bin/bash
+  142  sudo docker exec --name secound -itd sh
+  143  docker exec -it secound  /bin/bash
+  144  docker ps
+  145  vim Dockerfile
+  146  vim index.html
+  147  docker build -t my-custom-image .
+  148  docker images
+  149  docker run -d -p 8080:80 --name my-container my-custom-image
+  150  docker ps
+  151  docker exec -it my_custom_nginx /bin/bash
+  152  docker exec -it my-custom-image /bin/bash
+  153  docker exec -it f2996d618fd9 /bin/bash
+  154  docker commit f2996d618fd9 websitecontainer:latest
+  155  docker ps
+  156  docker image
+  157  docker images
+  158  docker run --name myfirst -itd -p 9000:80 websitecontainer
+  159  docker exec  myfirst -it
+  160  docker exec  myfirst 
+  161  docker exec -it myfirst /bin/bash
+  162  docker run --name my -itd -p 9001:80 websitecontainer
+  163  docker exec -it my /bin/bash
+  164  docker ps
+  165  docker exec -it my_container apt-get install -y nano
+  166  docker exec -it my apt-get install -y nano
+  167  docker exec -it my_container apt-get update
+  168  docker exec -it my apt-get update
+  169  docker exec -it my_container apt-get install -y vim
+  170  docker exec -it my apt-get install -y vim
+  171  docker exec -it my /bin/bash
+  172  history
+  173  sudo ufw status
+  174  To determine which firewall is running on your operating system (OS), you can use various commands and methods depending on the OS you're using. Here are the steps for different operating systems:
+  175  ### Windows
+  176  1. **Using Command Prompt or PowerShell:**
+  177  sudo systemctl status firewalld
+  178  sudo systemctl status firewalldsudo iptables -L
+  179  iptables -L
+  180  udo firewall-cmd --add-port=80/tcp --permanent
+  181  firewall-cmd --add-port=80/tcp --permanent
+  182  iptables --add-port=80/tcp --permanent
+  183  iptables -L
+  184  docker ps
+  185  <html lang="en">
+  186  <head>
+  187  docker exec my sh
+  188  docker exec -it my sh
+  189  find docker
+  190  ls
+  191  cat Dockerfile 
+  192  docker exec -it my sh
+  193  ls
+  194  vim index.html
+  195  docker build -t my-custom-image .
+  196  docker ps
+  197  docker build -t my-custom-image .
+  198  docker images 
+  199  docker run --name my -itd -p 9001:80 my-custom-image 
+  200  docker run --name my -itd -p 9002:80 my-custom-image 
+  201  docker run --name portifolio -itd -p 9002:80 my-custom-image 
+  202  ifconfig
+  203  vim index.html
+  204  docker build -t protifolio1 .
+  205  docker run --name portifolio -itd -p 9002:80 protifolio1 
+  206  docker run --name portifolio1 -itd -p 9002:80 protifolio1 
+  207  docker run --name portifolio2-itd -p 9003:80 protifolio1 
+  208  docker prune containes
+  209  docker prune containers
+  210  docker prune container
+  211  docker prune containers
+  212  docker prune --help
+  213  docker container prune 
+  214  docker run --name portifolio2-itd -p 9003:80 protifolio1 
+  215  free
+  216  ps -ef
+  217  ps aux
+  218  service nginx status
+  219  systemctl status nginx
+  220  ps kill 64008
+  221  kill 64015
+  222  kill 64029
+  223  docker run --name my -itd -p 81:80 protifolio1 
+  224  ls
+  225  cat index.html 
+  226  vim index.html
+  227  docker run --name my1 -itd -p 82:80 protifolio1 
+  228  docker build -t protifolio2 .
+  229  docker run --name my1 -itd -p 84:80 protifolio2
+  230  docker run --name my2 -itd -p 84:80 protifolio2
+  231  vim index.html
+  232  docker build -t port .
+  233  docker run --name srujanp -itd -p 8082:80 port
+  234  cat index.html 
+  235  docker containerps
+  236  docker ps
+  237  docker prune 
+  238  docker purne
+  239  docker container purne
+  240  docker container prune
+  241  docker images prune
+  242  docker ps
+  243  docker ps | purne
+  244  vim index.html
+  245  docker build -t port1 .
+  246  docker run --name srujanps -itd -p 8082:80 port1
+  247  docker run --name srujanps -itd -p 8083\:80 port1
+  248  docker run --name srujan -itd -p 8083\:80 port1
+  249  docker run --name srujan1 -itd -p 8083\:80 port1
+  250  docker build -t port1 .
+  251  vim index.html
+  252  docker build -t final .
+  253  docker run --name patil -itd -p 62:80 final
+  254  vim index.html
+  255  docker build -t final .
+  256  docker build -t final1 .
+  257  docker run --name patil1 -itd -p 62:80 final1
+  258  docker run --name patil2 -itd -p 60:80 srujan
+  259  docker ps
+  260  docker container purne
+  261  docker container prune
+  262  docker ps
+  263  docker container stop c9004d06f763
+  264  docker container stop 551108d565bd e09227f85436
+  265  docker container stop ba532e65e0ba
+  266  docker container stop 7ec56ebc0975 39151c7b73b4 ab9f86517abe f2996d618fd9 ff72371349a8 a6651a4aba59 9b062688b016 f3289e6a2729  
+  267  docker container prune
+  268  docker ps
+  269  docker container stop 9168c21e6540 
+  270  vim index.html
+  271  docker build -t srujan .
+  272  docker run --name patil1 -itd -p 8080:80 srujan
+  273  vim index.html
+  274  vim indexx.html
+  275  ls
+  276  vim Dockerfile 
+  277  docker build -t srujan .
+  278  docker build -t srujan1 .
+  279  docker run --name patil11 -itd -p 8080:80 srujan1
+  280  docker run --name patil12 -itd -p 8081:80 srujan1
+  281  vim Dockerfile 
+  282  ls
+  283  docker build -t srujan12 .
+  284  docker run --name patil13 -itd -p 8081:80 srujan12
+  285  docker run --name patil14 -itd -p 8083:80 srujan12
+  286  vim index.html
+  287  docker build -t vennela .
+  288  docker run --name sister -itd -p 8080:80 vennela
+  289  docker run --name vennu -itd -p 8090:80 vennela
+  290  ifconfig
+  291  vim index.html
+  292  docker build -t dd .
+  293  docker run --name ven -itd -p 8000:80 dd
+  294  vim index.html
+  295  ls
+  296  vim indexx.html 
+  297  docker build -t vennu .
+  298  docker run --name venu -itd -p 8001:80 vennu
+  299  vim Dockerfile 
+  300  docker build -t vasanth .
+  301  docker run --name vas -itd -p 8001:80 vasanth
+  302  docker run --name vasu -itd -p 8002:80 vasanth
+  303  vim indexx.html 
+  304  docker run --name tp -itd -p 8002:80 temp
+  305  docker build -t temp .
+  306  docker run --name tp -itd -p 8002:80 temp
+  307  docker run --name tep -itd -p 90:80 temp
+  308  By following these steps, you can successfully add files from your server to a Git repository and push them to a remote repository.
+  309  git init
+  310  git add .
+  311  git commit -m "intial" 
+  312  git remote add origin https://github.com/srujan-patil/practice.git
+  313  git push -u origin main
+  314  git push -u origin .
+  315  git push -u origin master
+  316  history >> allcommands.txt
